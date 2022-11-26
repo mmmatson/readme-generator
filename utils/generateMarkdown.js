@@ -1,10 +1,22 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+//Function returns a license badge based on which license is passed in
+function renderLicenseBadge(answer) { 
+if (answer.license === 'MIT License') {
+  return `![MIT License Badge](https://img.shields.io/badge/license-MIT-blue)`
+}
+else if (answer.license === 'Apache License 2.0') {
+  return `![Apache 2.0 License Badge](https://img.shields.io/badge/license-Apache%202.0-blue)`
+}
+else if (answer.license === 'GPL License (aka GNU General Public License v3.0)') {
+  return '![GNU GPLv3 License Badge](https://img.shields.io/badge/license-GNU%20GPLv3-blue)'
+}
+else if (answer.license === 'The Unlicense') {
+  return `![The Unlicense License Badge](https://img.shields.io/badge/license-The%20Unlicense-blue)`
+}
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { }
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) { }
+else {
+  return ""
+}
+}
 
 //Function returns the license section of README
 function renderLicenseSection(answer) {
@@ -28,7 +40,8 @@ function renderLicenseSection(answer) {
 
 //Generate markdown for README
 function generateMarkdown(answer) {
-  return `# ${answer.title}
+  return `${renderLicenseBadge(answer)}
+  # ${answer.title}
 
   ## Description
   ${answer.description}
