@@ -61,14 +61,14 @@ const questions = () => {
 //Write README file
 function writeToFile(fileName, data) { 
     fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log('README.md file successfully generated!')
+    err ? console.error(err) : console.log('sampleREADME.md file successfully generated!')
 );
 }
 
 //Define function to initialize app
 function init() {
     questions()
-    .then((answers) => {return writeToFile('README.md', generateMarkdown(answers))})
+    .then((answers) => {return writeToFile('sampleREADME.md', generateMarkdown(answers))})
     .catch((err) => console.error(err));
 }
 

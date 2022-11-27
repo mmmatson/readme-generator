@@ -1,21 +1,21 @@
 //Function returns a license badge based on which license is passed in
-function renderLicenseBadge(answers) { 
-if (answers.license === 'MIT License') {
-  return `![MIT License Badge](https://img.shields.io/badge/license-MIT-blue)`
-}
-else if (answers.license === 'Apache License 2.0') {
-  return `![Apache 2.0 License Badge](https://img.shields.io/badge/license-Apache%202.0-blue)`
-}
-else if (answers.license === 'GPL License (aka GNU General Public License v3.0)') {
-  return '![GNU GPLv3 License Badge](https://img.shields.io/badge/license-GNU%20GPLv3-blue)'
-}
-else if (answers.license === 'The Unlicense') {
-  return `![The Unlicense License Badge](https://img.shields.io/badge/license-The%20Unlicense-blue)`
-}
-// If there is no license, return an empty string
-else {
-  return ""
-}
+function renderLicenseBadge(answers) {
+  if (answers.license === 'MIT License') {
+    return `![MIT License Badge](https://img.shields.io/badge/license-MIT-blue)`
+  }
+  else if (answers.license === 'Apache License 2.0') {
+    return `![Apache 2.0 License Badge](https://img.shields.io/badge/license-Apache%202.0-blue)`
+  }
+  else if (answers.license === 'GPL License (aka GNU General Public License v3.0)') {
+    return '![GNU GPLv3 License Badge](https://img.shields.io/badge/license-GNU%20GPLv3-blue)'
+  }
+  else if (answers.license === 'The Unlicense') {
+    return `![The Unlicense License Badge](https://img.shields.io/badge/license-The%20Unlicense-blue)`
+  }
+  // If there is no license, return an empty string
+  else {
+    return ""
+  }
 }
 
 //Function returns the license section of README
@@ -70,7 +70,7 @@ function generateMarkdown(answers) {
   ## Questions
   You may send questions about this project to me through:
   - GitHub: [${answers.github}](https://github.com/${answers.github})
-  - Email: [${answers.email}](${answers.email})
+  - Email: ${answers.email}
 
   ## License
   ${renderLicenseSection(answers)}`
