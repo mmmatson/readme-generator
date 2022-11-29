@@ -19,6 +19,8 @@
   3. Enter 'node index.js' in the command line application to start the README generator.
 
   ## Usage
+  [README Generator Video Demo](https://drive.google.com/file/d/1_TeDiH18gSp9X_pF3R9aYN_vTr_KVspD/view)
+
   ![README-generator video demo](assets/videos/demo-readme-generator.webm)
 
   Follow the instructions for installation to start the README generator. Answer the question in your command line application to populate different sections of the README file. Once you have answered all questions, a "sampleREADME.md" file will be generated in your forked repository.
